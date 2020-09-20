@@ -1,0 +1,81 @@
+.display_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@setupBarHeight: 16px;
+.setup-wrap {
+  color: red;
+  .display_center;
+  height: @setupBarHeight;
+
+  .arrow {
+    width: 18px;
+    height: 13px;
+    flex-shrink: 0;
+    // 箭头默认有宽度不设置样式，在arrow-left & arrow-right 中添加背景图
+    &.arrow-left {
+      border: 1px solid yellowgreen;
+      cursor: pointer;
+    }
+    &.arrow-right {
+      border: 1px solid red;
+      cursor: pointer;
+    }
+  }
+
+  .setup-bar {
+    flex: 1;
+    border: 1px solid black;
+    height: 100%;
+    margin: 0 15px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+}
+
+.setup-item {
+  flex-shrink: 0;
+  position: relative;
+
+  .cricle {
+    width: 20px;
+    height: 20px;
+    background-color: skyblue;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    .item-label {
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translate(-50%);
+      white-space: nowrap;
+    }
+    .item-tips {
+      position: absolute;
+      top: 40px;
+      border: 1px solid blue;
+      width: 150px;
+      left: 50%;
+      transform: translate(-50%);
+    }
+  }
+
+  .setup-line {
+    width: calc(100% - 26px);
+    height: 10px;
+    background: red;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:last-child {
+    width: 0 !important;
+  }
+}

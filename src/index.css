@@ -1,0 +1,32 @@
+@import '~antd/dist/antd.css';
+html,
+body,
+#root{
+    height: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+input{
+    outline: none;
+}
+ul,
+ol,
+li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.display-item-center{
+    display: flex;
+    align-items: center;
+}
+
+p{
+    margin: 0;
+}
+.pointer{
+    cursor: pointer;
+}
